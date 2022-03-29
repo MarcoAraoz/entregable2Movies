@@ -15,7 +15,6 @@ const initModel = () => {
 //Many Movies <-to-> Many Actor
     Movie.belongsToMany(Actor, { through: ActorInMovie});
     Actor.belongsToMany(Movie, { through: ActorInMovie});
-
 }
 
 module.exports = { initModel }

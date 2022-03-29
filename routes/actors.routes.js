@@ -1,7 +1,7 @@
 const express = require('express');
 
 const {
-    getAllUsers,
+    getAllActors,
     getActorById,
     createActor,
     updateActor,
@@ -11,7 +11,7 @@ const {
 const router = express.Router()
 
 //GET http://localhost:5000/api/v1/actors
-router.get('/', getAllUsers);
+router.get('/', getAllActors);
 //GET http://localhost:5000/api/v1/actors/:id
 router.get('/:id', getActorById);
 //POST http://localhost:5000/api/v1/actors

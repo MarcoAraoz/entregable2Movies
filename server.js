@@ -7,7 +7,7 @@ sequelize
     .catch((err) => console.log(err));
 
 sequelize
-    .sync()
+    .sync()// { force:true }
     .then(() => console.log('Database synced'))
     .catch(err => console.log(err))
     

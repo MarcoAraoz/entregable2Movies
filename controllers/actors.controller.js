@@ -1,9 +1,14 @@
+
 const { Actor } = require('../models/actor.model');
+
 const { filterObj } = require('../util/filterObject');
 const { catchAsync } = require('../util/catchAsync');
+const { AppError } = require('../util/appError');
+const { storage } = require('../util/firebase');
+const { Movie } = require('../models/movie.model');
 
-//Get all users (GET)
-exports.getAllUsers = catchAsync( async (req, res, next) => {
+//Get all actors (GET)
+exports.getAllActors = catchAsync( async (req, res, next) => {
     try {
         const actor = await Actor.findAll();
 
